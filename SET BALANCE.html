@@ -1,0 +1,9 @@
+function setbalance($accno,$bal){
+if(isset($this->dbcon)){
+//update current balance
+$sql = "UPDATE accounts SET balance='".$bal."' WHERE accno='".$accno."'";
+if(!mysql_query($sql)){
+         throw new Exception(mysql_error());
+       }else{ return TRUE;}
+	   }
+}
